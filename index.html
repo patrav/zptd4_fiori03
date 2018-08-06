@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>KADS Mobile Dashboard</title>
+
+		<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m,sap.ui.commons,sap.viz,sap.suite.ui.microchart"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"zptd4_fiori03": ""}'>
+		</script>
+		<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAET23DIowy5C53ys356vC8B0sJsw_1joY&v=3.exp&sensor=false'></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+			var gMap;
+			var gMark;
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "zptd4_fiori03"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>

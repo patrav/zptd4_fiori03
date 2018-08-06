@@ -1,0 +1,124 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "zptd4_fiori03",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+
+		]
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "zptd4_fiori03.view.App",
+			"type": "JS"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "zptd4_fiori03.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"targets": {
+				"dash01": {
+					"viewType": "JS",
+					"transition": "slide",
+					"viewName": "Dash01"
+				},
+				"dash02": {
+					"viewType": "JS",
+					"transition": "slide",
+					"viewName": "Dash02"
+				},
+				"map01": {
+					"viewType": "JS",
+					"transition": "slide",
+					"viewName": "Map01"
+				}
+			},
+			"routes": [
+				{
+					"name": "to_dash01",
+					"pattern": "",
+					"target": [
+						"dash01"
+					]
+				},
+				{
+					"name": "to_dash02",
+					"pattern": "dash02",
+					"target": [
+						"dash02"
+					]
+				},
+				{
+					"name": "to_map01",
+					"pattern": "map01",
+					"target": [
+						"map01"
+					]
+				}
+			],
+			"config": {
+				"viewType": "JS",
+				"routerClass": "sap.m.routing.Router",
+				"controlId": "myApp",
+				"viewPath": "zptd4_fiori03.view",
+				"controlAggregation": "pages"
+			}
+		}
+	}
+}
